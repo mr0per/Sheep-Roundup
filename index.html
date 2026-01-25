@@ -736,6 +736,29 @@
     </div>
 
     <script src="sketch.js"></script>
+    <script>
+        // Scale the game to fit the screen
+        function scaleToFit() {
+            const containers = document.querySelectorAll('.container');
+            const designWidth = 1440;
+            const designHeight = 1024;
+            
+            const scaleX = window.innerWidth / designWidth;
+            const scaleY = window.innerHeight / designHeight;
+            const scale = Math.min(scaleX, scaleY);
+            
+            containers.forEach(container => {
+                container.style.transform = `scale(${scale})`;
+                container.style.transformOrigin = 'top left';
+                container.style.left = `${(window.innerWidth - designWidth * scale) / 2 - 100}px`;
+                container.style.top = `${(window.innerHeight - designHeight * scale) / 2}px`;
+            });
+        }
+        
+        // Scale on load and resize
+        window.addEventListener('load', scaleToFit);
+        window.addEventListener('resize', scaleToFit);
+    </script>
 
 </body>
 </html>

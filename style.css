@@ -7,23 +7,31 @@
 body {
     overflow: hidden;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background-color: #6e9c53;
+    background-color: #a8d88a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 .page {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
     position: relative;
     width: 1440px;
     height: 1024px;
-    background-color: green;
-    margin: 0 auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: #a8d88a;
     overflow: hidden;
+    transform-origin: center center;
 }
 
 /* Background image */
@@ -933,4 +941,55 @@ body {
     max-width: none;
     top: 0%;
     width: 100%;
+}
+
+/* Custom Notification */
+.custom-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c2c2c;
+    color: white;
+    padding: 40px 60px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    display: none;
+}
+
+.custom-notification.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.custom-notification button {
+    margin-top: 30px;
+    padding: 12px 40px;
+    background-color: #a8d88a;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.custom-notification button:hover {
+    background-color: #95c777;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }

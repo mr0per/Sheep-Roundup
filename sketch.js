@@ -13,6 +13,33 @@ let lastTransitionTime = 0;
 let isTransitioning = false;
 let blockClicks = false;
 
+// Custom notification function
+function showNotification(message) {
+    // Create notification if it doesn't exist
+    let notification = document.getElementById('custom-notification');
+    if (!notification) {
+        notification = document.createElement('div');
+        notification.id = 'custom-notification';
+        notification.className = 'custom-notification';
+        notification.innerHTML = `
+            <div class="notification-message"></div>
+            <button onclick="closeNotification()">OK</button>
+        `;
+        document.body.appendChild(notification);
+    }
+    
+    // Set message and show
+    notification.querySelector('.notification-message').textContent = message;
+    notification.classList.add('show');
+}
+
+function closeNotification() {
+    const notification = document.getElementById('custom-notification');
+    if (notification) {
+        notification.classList.remove('show');
+    }
+}
+
 // Global click interceptor to block clicks during transitions
 function globalClickBlocker(e) {
     console.log('Global click interceptor fired, blockClicks:', blockClicks);
@@ -155,20 +182,20 @@ function checkForSheep(object) {
     
     if (object === 'coop' && !tractorClicked && currentPage === 5) {
         // First time clicking chicken coop - show alert then hide it
-        alert(`No sheep here!`);
+        showNotification("No sheep here!");
         tractorClicked = true;
         document.getElementById('page5').style.display = 'none';
         currentPage = 6;
         document.getElementById('page6').style.display = 'block';
     } else if (object === 'coop' && tractorClicked && currentPage === 9) {
         // Clicking coop on page 9 - go to page 12
-        alert(`No sheep here!`);
+        showNotification("No sheep here!");
         document.getElementById('page9').style.display = 'none';
         currentPage = 12;
         document.getElementById('page12').style.display = 'block';
     } else if (object === 'coop' && currentPage === 10) {
         // Clicking coop on page 10 - show alert and go to completely empty scene
-        alert(`No sheep here!`);
+        showNotification("No sheep here!");
         document.getElementById('page10').style.display = 'none';
         currentPage = 11;
         document.getElementById('page11').style.display = 'block';
@@ -180,7 +207,7 @@ function checkForSheep(object) {
     } else if (object === 'tractor' && currentPage === 7) {
         // Clicking tractor on page 7 - hide tractor, show just sheep
         console.log('Tractor clicked on page 7 - going to page 12');
-        alert(`No sheep here!`);
+        showNotification("No sheep here!");
         document.getElementById('page7').style.display = 'none';
         currentPage = 12;
         document.getElementById('page12').style.display = 'block';
@@ -246,7 +273,7 @@ function collectSheep(sheepId) {
         }
     }
     
-    alert(`You've found a sheep`);
+    showNotification("You've found a sheep");
     
     // Hide current page and show appropriate next scene
     if (currentPage === 7) {
@@ -416,7 +443,7 @@ function checkBarnObject(object, event) {
             console.log('SET blockClicks to FALSE at', Date.now(), '- Re-enabled sheep clicks');
         }, 500);
     } else if (object === 'hay' && currentPage === 13) {
-        alert(`No sheep here!`);
+        showNotification("No sheep here!");
         document.getElementById('page13').style.display = 'none';
         currentPage = 14;
         document.getElementById('page14').style.display = 'block';
