@@ -316,3 +316,315 @@ body {
     top: -45.17%;
     width: 270.24%;
 }
+
+/* Barn Scene */
+.barn-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+}
+
+.barn-background img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.barn-return-arrow {
+    position: absolute;
+    display: block;
+    width: 109px;
+    height: 73px;
+    left: 39px;
+    top: 512px;
+    cursor: pointer;
+}
+
+.barn-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 1479.45%;
+    left: -172.48%;
+    max-width: none;
+    top: -590.41%;
+    width: 1761.47%;
+}
+
+.barn-building {
+    position: absolute;
+    display: block;
+    width: 959px;
+    height: 514px;
+    left: 490px;
+    top: 191px;
+    cursor: pointer;
+}
+
+.barn-image-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.barn-building .barn-image-container img {
+    position: absolute;
+    height: 199.22%;
+    left: -41.71%;
+    max-width: none;
+    top: -37.16%;
+    width: 150.16%;
+}
+
+.hay-pile {
+    position: absolute;
+    display: block;
+    width: 379px;
+    height: 207px;
+    left: 111px;
+    top: 502px;
+    cursor: pointer;
+}
+
+.hay-image-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hay-pile .hay-image-container img {
+    position: absolute;
+    height: 494.69%;
+    left: -9.76%;
+    max-width: none;
+    top: -241.06%;
+    width: 379.95%;
+}
+
+/* Barn Interior */
+.barn-interior-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 0;
+}
+
+.barn-interior-background img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.barn-sheep {
+    position: absolute;
+    display: none;
+    width: 323px;
+    height: 270px;
+    left: 303px;
+    top: 495px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.barn-sheep-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.barn-sheep .barn-sheep-container img {
+    position: absolute;
+    height: 379.26%;
+    left: -93.81%;
+    max-width: none;
+    top: -183.33%;
+    width: 445.82%;
+}
+
+.barn-hay-bales {
+    position: absolute;
+    display: block;
+    width: 323px;
+    height: 270px;
+    left: 303px;
+    top: 495px;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.barn-hay-bales:hover {
+    opacity: 0.95;
+}
+
+.barn-hay-bales-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.barn-hay-bales .barn-hay-bales-container img {
+    position: absolute;
+    height: 379.26%;
+    left: -93.81%;
+    max-width: none;
+    top: -183.33%;
+    width: 445.82%;
+}
+
+
+.barn-sheep-moved {
+    position: absolute;
+    display: block;
+    width: 281px;
+    height: 259px;
+    left: 357px;
+    top: 585px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.barn-sheep-moved-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.barn-sheep-moved .barn-sheep-moved-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+/* Pasture Scene Styles */
+.pasture-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 0;
+}
+
+.pasture-background img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pasture-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 769px;
+    top: 883px;
+    cursor: pointer;
+    transform: scaleY(-1);
+}
+
+.pasture-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 1018.87%;
+    left: -1345.71%;
+    max-width: none;
+    top: -203.77%;
+    width: 2742.86%;
+}
+
+.pasture-right-object {
+    position: absolute;
+    display: block;
+    width: 567px;
+    height: 816px;
+    left: 873px;
+    top: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.pasture-right-object:hover {
+    opacity: 0.95;
+}
+
+.pasture-left-object {
+    position: absolute;
+    display: block;
+    width: 243px;
+    height: 306px;
+    left: 213px;
+    top: 496px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.pasture-left-object:hover {
+    opacity: 0.95;
+}
+
+.pasture-object-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.pasture-right-object .pasture-object-container img {
+    position: absolute;
+    height: 125.49%;
+    left: -153.97%;
+    max-width: none;
+    top: 0;
+    width: 253.97%;
+}
+
+.pasture-left-object .pasture-object-container img {
+    position: absolute;
+    height: 264.6%;
+    left: -9.77%;
+    max-width: none;
+    top: -120.93%;
+    width: 469.06%;
+}
+
+.pasture-sheep {
+    position: absolute;
+    display: block;
+    width: 335px;
+    height: 309px;
+    left: 943px;
+    top: 512px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pasture-sheep-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.pasture-sheep .pasture-sheep-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}

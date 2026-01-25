@@ -179,7 +179,7 @@
         </a>
         
         <!-- Sheep (clickable) -->
-        <a href="#" class="found-sheep" onclick="collectSheep('coop-sheep'); return false;">
+        <a href="#" class="found-sheep" onclick="collectSheep('chicken-coop-sheep'); return false;">
             <div class="sheep-found-container">
                 <img src="images/Untitled_Artwork-1 (8).png" alt="">
             </div>
@@ -307,6 +307,203 @@
         <p class="sheep-counter" id="sheep-counter-page12">sheep collected: 0/4</p>
     </div>
 
+    <!-- Page 13 - Barn Scene (Initial) -->
+    <div class="container page" id="page13" style="display: none;">
+        <!-- Background image -->
+        <div class="barn-background">
+            <img src="images/Untitled_Artwork-1 (4).png" alt="">
+        </div>
+        
+        <!-- Return arrow (left) -->
+        <a href="#" class="barn-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Barn building (clickable) -->
+        <a href="#" class="barn-building" onclick="checkBarnObject('barn'); return false;">
+            <div class="barn-image-container">
+                <img src="images/Untitled_Artwork-2 (2).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Hay pile (clickable) -->
+        <a href="#" class="hay-pile" onclick="checkBarnObject('hay', event); return false;">
+            <div class="hay-image-container">
+                <img src="images/Untitled_Artwork-3 (2).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page13">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 14 - Barn Scene (After Hay Clicked) -->
+    <div class="container page" id="page14" style="display: none;">
+        <!-- Background image -->
+        <div class="barn-background">
+            <img src="images/Untitled_Artwork-1 (4).png" alt="">
+        </div>
+        
+        <!-- Return arrow (left) -->
+        <a href="#" class="barn-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Barn building (clickable) -->
+        <a href="#" class="barn-building" onclick="checkBarnObject('barn', event); return false;">
+            <div class="barn-image-container">
+                <img src="images/Untitled_Artwork-2 (2).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page14">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 15 - Barn Interior (Sheep Found) -->
+    <div class="container page" id="page15" style="display: none;">
+        <!-- Background image -->
+        <div class="barn-interior-background">
+            <img src="images/Untitled_Artwork-1 (5).png" alt="">
+        </div>
+        
+        <!-- Return arrow (left) -->
+        <a href="#" class="barn-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Hay bales (clickable) - left object -->
+        <a href="#" class="barn-hay-bales" onclick="checkBarnInterior('hay-bales'); return false;">
+            <div class="barn-hay-bales-container">
+                <img src="images/Untitled_Artwork-2 (3).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep (clickable) -->
+        <a href="#" class="barn-sheep" onclick="if(window.blockClicks){return false;} collectSheep('barn-sheep'); return false;">
+            <div class="barn-sheep-container">
+                <img src="images/Untitled_Artwork-2 (3).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page15">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 16 - Barn Interior (Sheep Moved Position) -->
+    <div class="container page" id="page16" style="display: none;">
+        <!-- Background image -->
+        <div class="barn-interior-background">
+            <img src="images/Untitled_Artwork-1 (5).png" alt="">
+        </div>
+        
+        <!-- Return arrow (left) -->
+        <a href="#" class="barn-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep in new position (clickable) -->
+        <a href="#" class="barn-sheep-moved" onclick="collectSheep('barn-sheep'); return false;">
+            <div class="barn-sheep-moved-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page16">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 17 - Barn Interior (Empty After Sheep Collected) -->
+    <div class="container page" id="page17" style="display: none;">
+        <!-- Background image -->
+        <div class="barn-interior-background">
+            <img src="images/Untitled_Artwork-1 (5).png" alt="">
+        </div>
+        
+        <!-- Return arrow (left) -->
+        <a href="#" class="barn-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page17">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 18 - Pasture Scene -->
+    <div class="container page" id="page18" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Right object (leaves/plants) -->
+        <a href="#" class="pasture-right-object" onclick="checkPastureObject('leaves'); return false;">
+            <div class="pasture-object-container">
+                <img src="images/Untitled_Artwork-2 (5).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Left object (basket) -->
+        <a href="#" class="pasture-left-object" onclick="checkPastureObject('basket'); return false;">
+            <div class="pasture-object-container">
+                <img src="images/Untitled_Artwork-3 (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page18">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 19 - Pasture with Sheep Revealed -->
+    <div class="container page" id="page19" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep (revealed) -->
+        <a href="#" class="pasture-sheep" onclick="collectSheep('pasture-sheep'); return false;">
+            <div class="pasture-sheep-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Left object (basket) -->
+        <a href="#" class="pasture-left-object" onclick="checkPastureObject('basket'); return false;">
+            <div class="pasture-object-container">
+                <img src="images/Untitled_Artwork-3 (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page19">sheep collected: X/4</p>
+    </div>
+
     <script src="sketch.js"></script>
+
 </body>
 </html>
