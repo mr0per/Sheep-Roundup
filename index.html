@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Page 1 -->
+    <div class="container page" id="page1">
         <!-- Background image -->
         <div class="background-wrapper">
             <img class="background-image" src="images/Untitled_Artwork (2).png" alt="">
@@ -19,7 +20,7 @@
         </div>
         
         <!-- Dialogue text -->
-        <div class="dialogue-text">
+        <div class="dialogue-text" onclick="nextPage()">
             <p>Howdy pardner, you must be the</p>
             <p>new sheep herd. I'm mighty glad</p>
             <p>yer here, five of our sheep got</p>
@@ -30,6 +31,139 @@
         <!-- Character name -->
         <p class="character-name">Shep</p>
     </div>
+
+    <!-- Page 2 -->
+    <div class="container page" id="page2" style="display: none;">
+        <!-- Background image -->
+        <div class="background-wrapper">
+            <img class="background-image" src="images/Untitled_Artwork (2).png" alt="">
+        </div>
+        
+        <!-- Text box -->
+        <div class="textbox-wrapper">
+            <img class="textbox-image" src="images/Untitled_Artwork (3).png" alt="">
+        </div>
+        
+        <!-- Dialogue text -->
+        <div class="dialogue-text" onclick="nextPage()">
+            <p>They'll be spread out cross the farm</p>
+            <p>just as a heads up they're crafty</p>
+            <p>little things and like to to hide</p>
+            <p>behind objects, so be sure to</p>
+            <p>click around to be extra sure</p>
+        </div>
+        
+        <!-- Character name -->
+        <p class="character-name">Shep</p>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="container page" id="page3" style="display: none;">
+        <!-- Background image -->
+        <div class="background-wrapper">
+            <img class="background-image" src="images/Untitled_Artwork (2).png" alt="">
+        </div>
+        
+        <!-- Text box -->
+        <div class="textbox-wrapper">
+            <img class="textbox-image" src="images/Untitled_Artwork (3).png" alt="">
+        </div>
+        
+        <!-- Dialogue text -->
+        <div class="dialogue-text" onclick="nextPage()">
+            <p>good luck partner!</p>
+        </div>
+        
+        <!-- Character name -->
+        <p class="character-name">Shep</p>
+    </div>
+
+    <!-- Page 4 - Location Selection -->
+    <div class="container page" id="page4" style="display: none;">
+        <!-- Background image -->
+        <div class="background-wrapper">
+            <img class="background-image" src="images/Untitled_Artwork (2).png" alt="">
+        </div>
+        
+        <!-- Up Arrow (Sheep) -->
+        <a href="#" class="arrow-up" onclick="selectLocation('up'); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Left Arrow (Chicken Coop) -->
+        <a href="#" class="arrow-left" onclick="selectLocation('left'); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Right Arrow (Barn) -->
+        <a href="#" class="arrow-right" onclick="selectLocation('right'); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+    </div>
+
+    <!-- Page 5 - Chicken Coop Scene -->
+    <div class="container page" id="page5" style="display: none;">
+        <!-- Background image -->
+        <div class="coop-background">
+            <img src="images/Untitled_Artwork-1 (2).png" alt="">
+        </div>
+        
+        <!-- Return arrow (right) -->
+        <a href="#" class="coop-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+        
+        <!-- Chicken Coop building (clickable) -->
+        <a href="#" class="chicken-coop" onclick="checkForSheep('coop'); return false;">
+            <div class="coop-image-container">
+                <img src="images/Untitled_Artwork-3 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Tractor (clickable) -->
+        <a href="#" class="tractor" onclick="checkForSheep('tractor'); return false;">
+            <div class="tractor-image-container">
+                <img src="images/Untitled_Artwork-2 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 6 - Chicken Coop Scene (After Tractor Clicked) -->
+    <div class="container page" id="page6" style="display: none;">
+        <!-- Background image -->
+        <div class="coop-background">
+            <img src="images/Untitled_Artwork-1 (2).png" alt="">
+        </div>
+        
+        <!-- Return arrow (right) -->
+        <a href="#" class="coop-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+        
+        <!-- Tractor (clickable) -->
+        <a href="#" class="tractor" onclick="checkForSheep('tractor'); return false;">
+            <div class="tractor-image-container">
+                <img src="images/Untitled_Artwork-2 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter">sheep collected: X/4</p>
+    </div>
+
     <script src="sketch.js"></script>
 </body>
 </html>

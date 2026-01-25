@@ -10,6 +10,13 @@ body {
     background-color: #6e9c53;
 }
 
+.page {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .container {
     position: relative;
     width: 1440px;
@@ -81,6 +88,173 @@ body {
     position: absolute;
     left: 954px;
     top: 896px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000000;
+    font-style: normal;
+    line-height: normal;
+}
+
+/* Location Selection Arrows */
+.arrow-up {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 720px;
+    top: 32px;
+    cursor: pointer;
+}
+
+.arrow-left {
+    position: absolute;
+    display: block;
+    width: 109px;
+    height: 73px;
+    left: 39px;
+    top: 512px;
+    cursor: pointer;
+}
+
+.arrow-right {
+    position: absolute;
+    display: block;
+    width: 97px;
+    height: 75px;
+    left: 1318px;
+    top: 492px;
+    cursor: pointer;
+}
+
+.arrow-image-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.arrow-up .arrow-image-container img {
+    position: absolute;
+    height: 1018.87%;
+    left: -1345.71%;
+    max-width: none;
+    top: -203.77%;
+    width: 2742.86%;
+}
+
+.arrow-left .arrow-image-container img {
+    position: absolute;
+    height: 1479.45%;
+    left: -172.48%;
+    max-width: none;
+    top: -590.41%;
+    width: 1761.47%;
+}
+
+.arrow-right .arrow-image-container img {
+    position: absolute;
+    height: 1440%;
+    left: -196.91%;
+    max-width: none;
+    top: -576%;
+    width: 1979.38%;
+}
+
+/* Chicken Coop Scene */
+.coop-background {
+    position: absolute;
+    width: 1440px;
+    height: 1024px;
+    left: 0;
+    top: -35px;
+}
+
+.coop-background img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.coop-return-arrow {
+    position: absolute;
+    display: block;
+    width: 97px;
+    height: 75px;
+    left: 1317px;
+    top: 474px;
+    cursor: pointer;
+}
+
+.coop-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 1440%;
+    left: -196.91%;
+    max-width: none;
+    top: -576%;
+    width: 1979.38%;
+}
+
+.chicken-coop {
+    position: absolute;
+    display: block;
+    width: 790px;
+    height: 411px;
+    left: 650px;
+    top: 236px;
+    cursor: pointer;
+}
+
+.coop-image-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.chicken-coop .coop-image-container img {
+    position: absolute;
+    height: 249.15%;
+    left: -82.28%;
+    max-width: none;
+    top: -44.04%;
+    width: 182.28%;
+}
+
+.tractor {
+    position: absolute;
+    display: block;
+    width: 504px;
+    height: 690px;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.tractor-image-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.tractor .tractor-image-container img {
+    position: absolute;
+    height: 148.41%;
+    left: 6.35%;
+    max-width: none;
+    top: -10.14%;
+    width: 285.71%;
+}
+
+.sheep-counter {
+    position: absolute;
+    left: 37px;
+    top: 958px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 32px;
