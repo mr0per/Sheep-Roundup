@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #6e9c53;
+}
+
+.container {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background-color: green;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Background image */
+.background-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Text box */
+.textbox-wrapper {
+    position: absolute;
+    width: 1039px;
+    height: 585px;
+    left: 228px;
+    top: 520px;
+}
+
+.textbox-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Dialogue text */
+.dialogue-text {
+    position: absolute;
+    left: 396px;
+    top: 624px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000000;
+    font-style: normal;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.dialogue-text p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Character name */
+.character-name {
+    position: absolute;
+    left: 954px;
+    top: 896px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000000;
+    font-style: normal;
+    line-height: normal;
+}
