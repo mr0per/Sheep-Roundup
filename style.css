@@ -628,3 +628,309 @@ body {
     top: -45.17%;
     width: 270.24%;
 }
+
+.pasture-empty-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 767px;
+    top: 905px;
+    cursor: pointer;
+    transform: scaleY(-1);
+}
+
+.pasture-empty-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 1018.87%;
+    left: -1345.71%;
+    max-width: none;
+    top: -203.77%;
+    width: 2742.86%;
+}
+
+.pasture-left-sheep {
+    position: absolute;
+    display: block;
+    width: 335px;
+    height: 309px;
+    left: 193px;
+    top: 512px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pasture-left-sheep .pasture-sheep-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+.pasture-final-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 771px;
+    top: 883px;
+    cursor: pointer;
+    transform: scaleY(-1);
+}
+
+.pasture-final-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 1018.87%;
+    left: -1345.71%;
+    max-width: none;
+    top: -203.77%;
+    width: 2742.86%;
+}
+
+.pasture-page23-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 769px;
+    top: 918px;
+    cursor: pointer;
+    transform: scaleY(-1);
+}
+
+.pasture-page23-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 1018.87%;
+    left: -1345.71%;
+    max-width: none;
+    top: -203.77%;
+    width: 2742.86%;
+}
+
+.pasture-page23-left-sheep {
+    position: absolute;
+    display: block;
+    width: 335px;
+    height: 309px;
+    left: 193px;
+    top: 507px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pasture-page23-left-sheep .pasture-sheep-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+.pasture-page24-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 769px;
+    top: 918px;
+    cursor: pointer;
+    transform: scaleY(-1);
+}
+
+.pasture-page24-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 1018.87%;
+    left: -1345.71%;
+    max-width: none;
+    top: -203.77%;
+    width: 2742.86%;
+}
+
+.pasture-page25-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 769px;
+    top: 918px;
+    cursor: pointer;
+    transform: scaleY(-1);
+}
+
+.pasture-page25-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 1018.87%;
+    left: -1345.71%;
+    max-width: none;
+    top: -203.77%;
+    width: 2742.86%;
+}
+
+.pasture-page25-sheep {
+    position: absolute;
+    display: block;
+    width: 335px;
+    height: 309px;
+    left: 943px;
+    top: 512px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pasture-page25-sheep .pasture-sheep-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+/* Page 26 - Both sheep visible (from tree click on page 23) */
+.pasture-page26-left-sheep {
+    position: absolute;
+    display: block;
+    width: 335px;
+    height: 309px;
+    left: 193px;
+    top: 512px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pasture-page26-left-sheep .pasture-sheep-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+.pasture-page26-right-sheep {
+    position: absolute;
+    display: block;
+    width: 335px;
+    height: 309px;
+    left: 943px;
+    top: 512px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pasture-page26-right-sheep .pasture-sheep-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+.pasture-page26-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 767px;
+    top: 905px;
+    transform: scaleY(-1);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.pasture-page26-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 100%;
+    left: 0%;
+    max-width: none;
+    top: 0%;
+    width: 100%;
+}
+
+/* Page 27 - Right sheep only (from collecting left on page 26) */
+.pasture-page27-sheep {
+    position: absolute;
+    display: block;
+    width: 335px;
+    height: 309px;
+    left: 943px;
+    top: 512px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pasture-page27-sheep .pasture-sheep-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+.pasture-page27-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 767px;
+    top: 905px;
+    transform: scaleY(-1);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.pasture-page27-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 100%;
+    left: 0%;
+    max-width: none;
+    top: 0%;
+    width: 100%;
+}
+
+/* Page 28 - Left sheep only (from collecting right on page 26) */
+.pasture-page28-left-sheep {
+    position: absolute;
+    display: block;
+    width: 335px;
+    height: 309px;
+    left: 193px;
+    top: 512px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pasture-page28-left-sheep .pasture-sheep-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+.pasture-page28-return-arrow {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 106px;
+    left: 767px;
+    top: 905px;
+    transform: scaleY(-1);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.pasture-page28-return-arrow .arrow-image-container img {
+    position: absolute;
+    height: 100%;
+    left: 0%;
+    max-width: none;
+    top: 0%;
+    width: 100%;
+}

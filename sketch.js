@@ -7,6 +7,7 @@ let tractorClicked = false;
 let chickenCoopCompleted = false;
 let barnCompleted = false;
 let pastureCompleted = false;
+let pastureSheepCount = 0;
 let canClickSheep = true;
 let lastTransitionTime = 0;
 let isTransitioning = false;
@@ -71,11 +72,17 @@ function selectLocation(direction) {
             document.getElementById('page13').style.display = 'block';
         }
     } else if (direction === 'up') {
-        // Pasture - go to page 4 if already completed
+        // Pasture - go to appropriate page based on completion status
         if (pastureCompleted) {
-            // Already collected sheep, just go back to map
-            console.log('Pasture already completed');
+            // Both sheep collected - go to completely empty page 22
+            currentPage = 22;
+            document.getElementById('page22').style.display = 'block';
+        } else if (pastureSheepCount === 1) {
+            // One sheep collected - go to page 20 (empty with basket)
+            currentPage = 20;
+            document.getElementById('page20').style.display = 'block';
         } else {
+            // No sheep collected yet - go to initial page 18
             currentPage = 18;
             document.getElementById('page18').style.display = 'block';
         }
@@ -115,6 +122,24 @@ function returnToMap() {
         document.getElementById('page18').style.display = 'none';
     } else if (currentPage === 19) {
         document.getElementById('page19').style.display = 'none';
+    } else if (currentPage === 20) {
+        document.getElementById('page20').style.display = 'none';
+    } else if (currentPage === 21) {
+        document.getElementById('page21').style.display = 'none';
+    } else if (currentPage === 22) {
+        document.getElementById('page22').style.display = 'none';
+    } else if (currentPage === 23) {
+        document.getElementById('page23').style.display = 'none';
+    } else if (currentPage === 24) {
+        document.getElementById('page24').style.display = 'none';
+    } else if (currentPage === 25) {
+        document.getElementById('page25').style.display = 'none';
+    } else if (currentPage === 26) {
+        document.getElementById('page26').style.display = 'none';
+    } else if (currentPage === 27) {
+        document.getElementById('page27').style.display = 'none';
+    } else if (currentPage === 28) {
+        document.getElementById('page28').style.display = 'none';
     }
     
     // Show location selection
@@ -214,8 +239,11 @@ function collectSheep(sheepId) {
     }
     
     // Mark pasture as completed for pasture sheep
-    if (sheepId === 'pasture-sheep') {
-        pastureCompleted = true;
+    if (sheepId === 'pasture-sheep' || sheepId === 'pasture-left-sheep') {
+        pastureSheepCount++;
+        if (pastureSheepCount >= 2) {
+            pastureCompleted = true;
+        }
     }
     
     alert(`You've found a sheep`);
@@ -267,10 +295,80 @@ function collectSheep(sheepId) {
             counter17.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
         }
     } else if (currentPage === 19) {
-        // From pasture - collect sheep, go back to map
+        // From pasture - collect sheep, go to empty pasture page 20
         document.getElementById('page19').style.display = 'none';
-        currentPage = 4;
-        document.getElementById('page4').style.display = 'block';
+        currentPage = 20;
+        document.getElementById('page20').style.display = 'block';
+        const counter20 = document.getElementById('sheep-counter-page20');
+        if (counter20) {
+            counter20.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
+        }
+    } else if (currentPage === 21) {
+        // From pasture left sheep - collect sheep, go to completely empty pasture page 22
+        document.getElementById('page21').style.display = 'none';
+        currentPage = 22;
+        document.getElementById('page22').style.display = 'block';
+        const counter22 = document.getElementById('sheep-counter-page22');
+        if (counter22) {
+            counter22.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
+        }
+    } else if (currentPage === 23) {
+        // From pasture page 23 (left sheep with tree) - collect sheep, go to page 24 (just tree)
+        document.getElementById('page23').style.display = 'none';
+        currentPage = 24;
+        document.getElementById('page24').style.display = 'block';
+        const counter24 = document.getElementById('sheep-counter-page24');
+        if (counter24) {
+            counter24.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
+        }
+    } else if (currentPage === 25) {
+        // From pasture page 25 (only right sheep) - collect sheep, go to page 22 (completely empty)
+        document.getElementById('page25').style.display = 'none';
+        currentPage = 22;
+        document.getElementById('page22').style.display = 'block';
+        const counter22 = document.getElementById('sheep-counter-page22');
+        if (counter22) {
+            counter22.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
+        }
+    } else if (currentPage === 26) {
+        // From page 26 (both sheep visible) - collect one sheep
+        if (sheepId === 'pasture-left-sheep') {
+            // Collected left sheep - show only right sheep on page 27
+            document.getElementById('page26').style.display = 'none';
+            currentPage = 27;
+            document.getElementById('page27').style.display = 'block';
+            const counter27 = document.getElementById('sheep-counter-page27');
+            if (counter27) {
+                counter27.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
+            }
+        } else if (sheepId === 'pasture-sheep') {
+            // Collected right sheep - show only left sheep on page 28
+            document.getElementById('page26').style.display = 'none';
+            currentPage = 28;
+            document.getElementById('page28').style.display = 'block';
+            const counter28 = document.getElementById('sheep-counter-page28');
+            if (counter28) {
+                counter28.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
+            }
+        }
+    } else if (currentPage === 27) {
+        // From page 27 (only right sheep) - collect sheep, go to page 22 (completely empty)
+        document.getElementById('page27').style.display = 'none';
+        currentPage = 22;
+        document.getElementById('page22').style.display = 'block';
+        const counter22 = document.getElementById('sheep-counter-page22');
+        if (counter22) {
+            counter22.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
+        }
+    } else if (currentPage === 28) {
+        // From page 28 (only left sheep) - collect sheep, go to page 22 (completely empty)
+        document.getElementById('page28').style.display = 'none';
+        currentPage = 22;
+        document.getElementById('page22').style.display = 'block';
+        const counter22 = document.getElementById('sheep-counter-page22');
+        if (counter22) {
+            counter22.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
+        }
     }
 }
 
@@ -375,11 +473,30 @@ function checkPastureObject(object) {
         currentPage = 19;
         document.getElementById('page19').style.display = 'block';
     } else if (object === 'basket' && currentPage === 18) {
-        // Clicked basket - no sheep here
-        alert('No sheep here!');
+        // Clicked basket on initial page - reveal left sheep with tree on page 23
+        document.getElementById('page18').style.display = 'none';
+        currentPage = 23;
+        document.getElementById('page23').style.display = 'block';
     } else if (object === 'basket' && currentPage === 19) {
-        // Clicked basket on page with sheep visible - no sheep here
-        alert('No sheep here!');
+        // Clicked basket on page 19 - reveal both sheep on page 26
+        document.getElementById('page19').style.display = 'none';
+        currentPage = 26;
+        document.getElementById('page26').style.display = 'block';
+    } else if (object === 'basket' && currentPage === 20) {
+        // Clicked basket on empty pasture - reveal second sheep on page 21
+        document.getElementById('page20').style.display = 'none';
+        currentPage = 21;
+        document.getElementById('page21').style.display = 'block';
+    } else if (object === 'leaves' && currentPage === 23) {
+        // Clicked tree on page 23 - reveal BOTH sheep on page 26
+        document.getElementById('page23').style.display = 'none';
+        currentPage = 26;
+        document.getElementById('page26').style.display = 'block';
+    } else if (object === 'leaves' && currentPage === 24) {
+        // Clicked leaves on page 24 - reveal right sheep on page 25 (no basket)
+        document.getElementById('page24').style.display = 'none';
+        currentPage = 25;
+        document.getElementById('page25').style.display = 'block';
     }
 }
 

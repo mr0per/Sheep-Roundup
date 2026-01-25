@@ -503,6 +503,238 @@
         <p class="sheep-counter" id="sheep-counter-page19">sheep collected: X/4</p>
     </div>
 
+    <!-- Page 20 - Empty Pasture (After Sheep Collected) -->
+    <div class="container page" id="page20" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-empty-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Left object (basket) -->
+        <a href="#" class="pasture-left-object" onclick="checkPastureObject('basket'); return false;">
+            <div class="pasture-object-container">
+                <img src="images/Untitled_Artwork-3 (4).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page20">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 21 - Pasture with Second Sheep Revealed (from basket) -->
+    <div class="container page" id="page21" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep on left -->
+        <a href="#" class="pasture-left-sheep" onclick="collectSheep('pasture-left-sheep'); return false;">
+            <div class="pasture-sheep-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page21">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 22 - Completely Empty Pasture (Both Sheep Collected) -->
+    <div class="container page" id="page22" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-final-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page22">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 23 - Pasture with Left Sheep and Tree (from basket on page 18) -->
+    <div class="container page" id="page23" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-page23-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Right object (leaves/plants) -->
+        <a href="#" class="pasture-right-object" onclick="checkPastureObject('leaves'); return false;">
+            <div class="pasture-object-container">
+                <img src="images/Untitled_Artwork-2 (5).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep on left -->
+        <a href="#" class="pasture-page23-left-sheep" onclick="collectSheep('pasture-left-sheep'); return false;">
+            <div class="pasture-sheep-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page23">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 24 - Pasture with Just Tree (after collecting left sheep from page 23) -->
+    <div class="container page" id="page24" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-page24-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Right object (leaves/plants) -->
+        <a href="#" class="pasture-right-object" onclick="checkPastureObject('leaves'); return false;">
+            <div class="pasture-object-container">
+                <img src="images/Untitled_Artwork-2 (5).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page24">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 25 - Pasture with Only Right Sheep (no basket) -->
+    <div class="container page" id="page25" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-page25-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep on right (no basket) -->
+        <a href="#" class="pasture-page25-sheep" onclick="collectSheep('pasture-sheep'); return false;">
+            <div class="pasture-sheep-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page25">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 26 - Pasture with Both Sheep Visible (no tree, no basket) -->
+    <div class="container page" id="page26" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-page26-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Left sheep -->
+        <a href="#" class="pasture-page26-left-sheep" onclick="collectSheep('pasture-left-sheep'); return false;">
+            <div class="pasture-sheep-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Right sheep -->
+        <a href="#" class="pasture-page26-right-sheep" onclick="collectSheep('pasture-sheep'); return false;">
+            <div class="pasture-sheep-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page26">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 27 - Pasture with Only Right Sheep (from collecting left on page 26) -->
+    <div class="container page" id="page27" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-page27-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Right sheep only -->
+        <a href="#" class="pasture-page27-sheep" onclick="collectSheep('pasture-sheep'); return false;">
+            <div class="pasture-sheep-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page27">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 28 - Pasture with Only Left Sheep (from collecting right on page 26) -->
+    <div class="container page" id="page28" style="display: none;">
+        <!-- Background image -->
+        <div class="pasture-background">
+            <img src="images/Untitled_Artwork-1 (7).png" alt="">
+        </div>
+        
+        <!-- Down arrow (return to map) -->
+        <a href="#" class="pasture-page28-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Left sheep only -->
+        <a href="#" class="pasture-page28-left-sheep" onclick="collectSheep('pasture-left-sheep'); return false;">
+            <div class="pasture-sheep-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page28">sheep collected: X/4</p>
+    </div>
+
     <script src="sketch.js"></script>
 
 </body>
