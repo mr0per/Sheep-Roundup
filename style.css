@@ -262,3 +262,57 @@ body {
     font-style: normal;
     line-height: normal;
 }
+
+/* Found Sheep */
+.found-sheep {
+    position: absolute;
+    display: block;
+    width: 281px;
+    height: 259px;
+    left: 0;
+    top: 474px;
+    cursor: pointer;
+}
+
+.sheep-found-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.found-sheep .sheep-found-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}
+
+/* Sheep on left (alternate position) */
+.found-sheep-left {
+    position: absolute;
+    display: block;
+    width: 281px;
+    height: 259px;
+    left: 31px;
+    top: 485px;
+    cursor: pointer;
+}
+
+.sheep-left-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.found-sheep-left .sheep-left-container img {
+    position: absolute;
+    height: 208.49%;
+    left: -95.44%;
+    max-width: none;
+    top: -45.17%;
+    width: 270.24%;
+}

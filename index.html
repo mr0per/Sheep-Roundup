@@ -164,6 +164,156 @@
         <p class="sheep-counter">sheep collected: X/4</p>
     </div>
 
+    <!-- Page 7 - Chicken Coop Scene (Sheep Found Behind Tractor) -->
+    <div class="container page" id="page7" style="display: none;">
+        <!-- Background image -->
+        <div class="coop-background">
+            <img src="images/Untitled_Artwork-1 (2).png" alt="">
+        </div>
+        
+        <!-- Return arrow (right) -->
+        <a href="#" class="coop-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+        
+        <!-- Tractor (clickable) -->
+        <a href="#" class="tractor" onclick="checkForSheep('tractor'); return false;">
+            <div class="tractor-image-container">
+                <img src="images/Untitled_Artwork-1 (7).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep (clickable) -->
+        <a href="#" class="found-sheep" onclick="collectSheep('coop-sheep'); return false;">
+            <div class="sheep-found-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 8 - Chicken Coop Scene (After Sheep Collected) -->
+    <div class="container page" id="page8" style="display: none;">
+        <!-- Background image -->
+        <div class="coop-background">
+            <img src="images/Untitled_Artwork-1 (2).png" alt="">
+        </div>
+        
+        <!-- Return arrow (right) -->
+        <a href="#" class="coop-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page8">sheep collected: 1/4</p>
+    </div>
+
+    <!-- Page 9 - Chicken Coop Scene (Tractor Clicked First - Sheep Appears) -->
+    <div class="container page" id="page9" style="display: none;">
+        <!-- Background image -->
+        <div class="coop-background">
+            <img src="images/Untitled_Artwork-1 (2).png" alt="">
+        </div>
+        
+        <!-- Return arrow (right) -->
+        <a href="#" class="coop-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+        
+        <!-- Chicken Coop building (clickable) -->
+        <a href="#" class="chicken-coop" onclick="checkForSheep('coop'); return false;">
+            <div class="coop-image-container">
+                <img src="images/Untitled_Artwork-3 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep on left (clickable) -->
+        <a href="#" class="found-sheep-left" onclick="collectSheep('coop-sheep-left'); return false;">
+            <div class="sheep-left-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter">sheep collected: X/4</p>
+    </div>
+
+    <!-- Page 10 - Chicken Coop Scene (After Sheep Collected from Tractor Path) -->
+    <div class="container page" id="page10" style="display: none;">
+        <!-- Background image -->
+        <div class="coop-background">
+            <img src="images/Untitled_Artwork-1 (2).png" alt="">
+        </div>
+        
+        <!-- Return arrow (right) -->
+        <a href="#" class="coop-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+        
+        <!-- Chicken Coop building (clickable) -->
+        <a href="#" class="chicken-coop" onclick="checkForSheep('coop'); return false;">
+            <div class="coop-image-container">
+                <img src="images/Untitled_Artwork-3 (1).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page10">sheep collected: 1/4</p>
+    </div>
+
+    <!-- Page 11 - Chicken Coop Scene (Completely Empty After Coop Clicked) -->
+    <div class="container page" id="page11" style="display: none;">
+        <!-- Background image -->
+        <div class="coop-background">
+            <img src="images/Untitled_Artwork-1 (2).png" alt="">
+        </div>
+        
+        <!-- Return arrow (right) -->
+        <a href="#" class="coop-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page11">sheep collected: 1/4</p>
+    </div>
+
+    <!-- Page 12 - Chicken Coop Scene (Just Sheep After Tractor Clicked on Page 7) -->
+    <div class="container page" id="page12" style="display: none;">
+        <!-- Background image -->
+        <div class="coop-background">
+            <img src="images/Untitled_Artwork-1 (2).png" alt="">
+        </div>
+        
+        <!-- Return arrow (right) -->
+        <a href="#" class="coop-return-arrow" onclick="returnToMap(); return false;">
+            <div class="arrow-image-container">
+                <img src="images/Untitled_Artwork-1.png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep (left side) -->
+        <a href="#" class="found-sheep-left" onclick="collectSheep('sheep1'); return false;">
+            <div class="sheep-left-container">
+                <img src="images/Untitled_Artwork-1 (8).png" alt="">
+            </div>
+        </a>
+        
+        <!-- Sheep counter -->
+        <p class="sheep-counter" id="sheep-counter-page12">sheep collected: 0/4</p>
+    </div>
+
     <script src="sketch.js"></script>
 </body>
 </html>
