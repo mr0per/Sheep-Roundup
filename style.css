@@ -999,3 +999,88 @@ body {
         transform: translate(-50%, -50%);
     }
 }
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-1.5px) rotate(-0.5deg); }
+    75% { transform: translateX(1.5px) rotate(0.5deg); }
+}
+
+@keyframes sheepJump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+/* Add jump animation to sheep when they have the jump class */
+.sheep-jump {
+    animation: sheepJump 0.6s ease-out !important;
+}
+
+/* Sparkle effect on sheep */
+.sheep-jump::before,
+.sheep-jump::after {
+    content: '✨';
+    position: absolute;
+    font-size: 24px;
+    animation: sparkle 0.6s ease-out;
+    pointer-events: none;
+}
+
+.sheep-jump::before {
+    top: -10px;
+    left: -10px;
+    animation-delay: 0s;
+}
+
+.sheep-jump::after {
+    top: -10px;
+    right: -10px;
+    animation-delay: 0.15s;
+}
+
+/* Add shake animation to all clickable objects on hover */
+.chicken-coop:hover,
+.tractor:hover,
+.barn-building:hover,
+.hay-pile:hover,
+.barn-hay-bales:hover,
+.pasture-right-object:hover,
+.pasture-left-object:hover,
+.found-sheep:hover:not(.sheep-jump),
+.found-sheep-left:hover:not(.sheep-jump),
+.barn-sheep:hover:not(.sheep-jump),
+.barn-sheep-moved:hover:not(.sheep-jump),
+.pasture-sheep:hover:not(.sheep-jump),
+.pasture-left-sheep:hover:not(.sheep-jump),
+.pasture-page23-left-sheep:hover:not(.sheep-jump),
+.pasture-page25-sheep:hover:not(.sheep-jump),
+.pasture-page26-left-sheep:hover:not(.sheep-jump),
+.pasture-page26-right-sheep:hover:not(.sheep-jump),
+.pasture-page27-sheep:hover:not(.sheep-jump),
+.pasture-page28-left-sheep:hover:not(.sheep-jump) {
+    animation: shake 0.3s ease-in-out infinite;
+}
+
+/* Persistent Sheep Counter */
+.persistent-sheep-counter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    border: 3px solid #8bc34a;
+}
