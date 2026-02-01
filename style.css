@@ -76,8 +76,11 @@ body {
 /* Dialogue text */
 .dialogue-text {
     position: absolute;
-    left: 396px;
-    top: 624px;
+    left: 228px;
+    top: 520px;
+    width: 1039px;
+    height: 585px;
+    padding: 104px 168px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 32px;
@@ -85,11 +88,13 @@ body {
     font-style: normal;
     line-height: normal;
     cursor: url('images/paw-cursor-21.png') 64 64, auto;
+    z-index: 10;
 }
 
 .dialogue-text p {
     margin: 0;
     white-space: nowrap;
+    pointer-events: none;
 }
 
 /* Character name */
