@@ -7,7 +7,7 @@
 body {
     overflow: hidden;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background-color: #a8d88a;
+    background-color: #ffe4a8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -986,7 +986,7 @@ body {
 }
 
 .custom-notification button:hover {
-    background-color: #95c777;
+    background-color: #4CAF50;
 }
 
 @keyframes fadeIn {
