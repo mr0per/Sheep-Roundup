@@ -77,6 +77,18 @@ function nextPage() {
     }
 }
 
+// Navigate to previous page
+function previousPage() {
+    if (currentPage > 1) {
+        // Hide current page
+        document.getElementById(`page${currentPage}`).style.display = 'none';
+        
+        // Show previous page
+        currentPage--;
+        document.getElementById(`page${currentPage}`).style.display = 'block';
+    }
+}
+
 // Update persistent counter
 function updatePersistentCounter() {
     const counterElement = document.getElementById('sheep-count');

@@ -97,6 +97,26 @@ body {
     pointer-events: none;
 }
 
+/* Dialogue back button */
+.dialogue-back-button {
+    position: absolute;
+    left: 400px;
+    top: 1000px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #ff0000;
+    text-decoration: none;
+    cursor: url('images/paw-cursor-21.png') 64 64, auto;
+    z-index: 1000;
+    pointer-events: auto;
+    display: block;
+}
+
+.dialogue-back-button:hover {
+    text-decoration: underline;
+}
+
 /* Character name */
 .character-name {
     position: absolute;
