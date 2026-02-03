@@ -382,33 +382,17 @@ function collectSheep(sheepId) {
         document.getElementById('page7').style.display = 'none';
         currentPage = 8;
         document.getElementById('page8').style.display = 'block';
-        const counter8 = document.getElementById('sheep-counter-page8');
-        if (counter8) {
-            counter8.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 9) {
         // From tractor-first path -> go to page 10 (coop and tractor remain)
         document.getElementById('page9').style.display = 'none';
         currentPage = 10;
         document.getElementById('page10').style.display = 'block';
-        const counter10 = document.getElementById('sheep-counter-page10');
-        if (counter10) {
-            counter10.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
         // Also update page 11 counter in case they go there
-        const counter11 = document.getElementById('sheep-counter-page11');
-        if (counter11) {
-            counter11.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 12) {
         // From page 12 (sheep only after tractor clicked) -> go to page 11
         document.getElementById('page12').style.display = 'none';
         currentPage = 11;
         document.getElementById('page11').style.display = 'block';
-        const counter11 = document.getElementById('sheep-counter-page11');
-        if (counter11) {
-            counter11.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 15 || currentPage === 16) {
         // From barn interior - collect sheep, go to empty barn
         if (currentPage === 15) {
@@ -418,46 +402,26 @@ function collectSheep(sheepId) {
         }
         currentPage = 17;
         document.getElementById('page17').style.display = 'block';
-        const counter17 = document.getElementById('sheep-counter-page17');
-        if (counter17) {
-            counter17.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 19) {
         // From pasture - collect sheep, go to empty pasture page 20
         document.getElementById('page19').style.display = 'none';
         currentPage = 20;
         document.getElementById('page20').style.display = 'block';
-        const counter20 = document.getElementById('sheep-counter-page20');
-        if (counter20) {
-            counter20.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 21) {
         // From pasture left sheep - collect sheep, go to completely empty pasture page 22
         document.getElementById('page21').style.display = 'none';
         currentPage = 22;
         document.getElementById('page22').style.display = 'block';
-        const counter22 = document.getElementById('sheep-counter-page22');
-        if (counter22) {
-            counter22.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 23) {
         // From pasture page 23 (left sheep with tree) - collect sheep, go to page 24 (just tree)
         document.getElementById('page23').style.display = 'none';
         currentPage = 24;
         document.getElementById('page24').style.display = 'block';
-        const counter24 = document.getElementById('sheep-counter-page24');
-        if (counter24) {
-            counter24.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 25) {
         // From pasture page 25 (only right sheep) - collect sheep, go to page 22 (completely empty)
         document.getElementById('page25').style.display = 'none';
         currentPage = 22;
         document.getElementById('page22').style.display = 'block';
-        const counter22 = document.getElementById('sheep-counter-page22');
-        if (counter22) {
-            counter22.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 26) {
         // From page 26 (both sheep visible) - collect one sheep
         if (sheepId === 'pasture-left-sheep') {
@@ -465,38 +429,22 @@ function collectSheep(sheepId) {
             document.getElementById('page26').style.display = 'none';
             currentPage = 27;
             document.getElementById('page27').style.display = 'block';
-            const counter27 = document.getElementById('sheep-counter-page27');
-            if (counter27) {
-                counter27.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-            }
         } else if (sheepId === 'pasture-sheep') {
             // Collected right sheep - show only left sheep on page 28
             document.getElementById('page26').style.display = 'none';
             currentPage = 28;
             document.getElementById('page28').style.display = 'block';
-            const counter28 = document.getElementById('sheep-counter-page28');
-            if (counter28) {
-                counter28.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-            }
         }
     } else if (currentPage === 27) {
         // From page 27 (only right sheep) - collect sheep, go to page 22 (completely empty)
         document.getElementById('page27').style.display = 'none';
         currentPage = 22;
         document.getElementById('page22').style.display = 'block';
-        const counter22 = document.getElementById('sheep-counter-page22');
-        if (counter22) {
-            counter22.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     } else if (currentPage === 28) {
         // From page 28 (only left sheep) - collect sheep, go to page 22 (completely empty)
         document.getElementById('page28').style.display = 'none';
         currentPage = 22;
         document.getElementById('page22').style.display = 'block';
-        const counter22 = document.getElementById('sheep-counter-page22');
-        if (counter22) {
-            counter22.textContent = `sheep collected: ${sheepFound}/${totalSheep}`;
-        }
     }
 }
 
@@ -658,3 +606,4 @@ function endGame() {
 
 // Initialize
 console.log('Sheep Roundup - Click the text to continue');
+
