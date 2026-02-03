@@ -131,6 +131,69 @@ function selectLocation(direction) {
 
 // Return to map
 function returnToMap() {
+    // Check if all 4 sheep have been collected
+    if (sheepFound >= 4) {
+        // Hide current scene
+        if (currentPage === 5) {
+            document.getElementById('page5').style.display = 'none';
+        } else if (currentPage === 6) {
+            document.getElementById('page6').style.display = 'none';
+        } else if (currentPage === 7) {
+            document.getElementById('page7').style.display = 'none';
+        } else if (currentPage === 8) {
+            document.getElementById('page8').style.display = 'none';
+        } else if (currentPage === 9) {
+            document.getElementById('page9').style.display = 'none';
+        } else if (currentPage === 10) {
+            document.getElementById('page10').style.display = 'none';
+        } else if (currentPage === 11) {
+            document.getElementById('page11').style.display = 'none';
+        } else if (currentPage === 12) {
+            document.getElementById('page12').style.display = 'none';
+        } else if (currentPage === 13) {
+            document.getElementById('page13').style.display = 'none';
+        } else if (currentPage === 14) {
+            document.getElementById('page14').style.display = 'none';
+        } else if (currentPage === 15) {
+            document.getElementById('page15').style.display = 'none';
+        } else if (currentPage === 16) {
+            document.getElementById('page16').style.display = 'none';
+        } else if (currentPage === 17) {
+            document.getElementById('page17').style.display = 'none';
+        } else if (currentPage === 18) {
+            document.getElementById('page18').style.display = 'none';
+        } else if (currentPage === 19) {
+            document.getElementById('page19').style.display = 'none';
+        } else if (currentPage === 20) {
+            document.getElementById('page20').style.display = 'none';
+        } else if (currentPage === 21) {
+            document.getElementById('page21').style.display = 'none';
+        } else if (currentPage === 22) {
+            document.getElementById('page22').style.display = 'none';
+        } else if (currentPage === 23) {
+            document.getElementById('page23').style.display = 'none';
+        } else if (currentPage === 24) {
+            document.getElementById('page24').style.display = 'none';
+        } else if (currentPage === 25) {
+            document.getElementById('page25').style.display = 'none';
+        } else if (currentPage === 26) {
+            document.getElementById('page26').style.display = 'none';
+        } else if (currentPage === 27) {
+            document.getElementById('page27').style.display = 'none';
+        } else if (currentPage === 28) {
+            document.getElementById('page28').style.display = 'none';
+        }
+        
+        // Show ending page
+        currentPage = 29;
+        document.getElementById('page29').style.display = 'block';
+        
+        // Hide persistent counter on ending page
+        document.getElementById('persistent-counter').style.display = 'none';
+        
+        return;
+    }
+    
     // Hide current scene
     if (currentPage === 5) {
         document.getElementById('page5').style.display = 'none';
@@ -294,7 +357,7 @@ function collectSheep(sheepId) {
     updatePersistentCounter();
     
     // Mark chicken coop as completed only for chicken coop sheep
-    if (sheepId === 'chicken-coop-sheep' || sheepId === 'left-chicken-coop-sheep') {
+    if (sheepId === 'chicken-coop-sheep' || sheepId === 'left-chicken-coop-sheep' || sheepId === 'coop-sheep-left') {
         chickenCoopCompleted = true;
     }
     
@@ -572,6 +635,25 @@ function checkPastureObject(object) {
         document.getElementById('page25').style.display = 'block';
         triggerSheepJump();
     }
+}
+
+// Navigate from page 29 to page 30
+function nextEndingPage() {
+    document.getElementById('page29').style.display = 'none';
+    currentPage = 30;
+    document.getElementById('page30').style.display = 'block';
+}
+
+// Navigate from page 30 to page 31
+function nextEndingPage2() {
+    document.getElementById('page30').style.display = 'none';
+    currentPage = 31;
+    document.getElementById('page31').style.display = 'block';
+}
+
+// End game with congratulations message
+function endGame() {
+    showNotification('congratulations you found all the sheep!');
 }
 
 // Initialize
